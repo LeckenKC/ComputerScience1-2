@@ -95,9 +95,26 @@ public class StringAnalyze {
 	}
 	public static void main(String[] args)
 	{
-		System.out.println(commonLetters("Apple", "Apple"));
-		System.out.println(swapHere("Computer", 5));
-		System.out.println(letterSum("dog!!"));
-		System.out.println(isValidPassword("work1NGpassw0rd"));
+		Scanner scnr = new Scanner(System.in);
+		
+		System.out.println("What is your first input for 'commonLetters': ");
+		String commonLettersInput1 = scnr.nextLine();
+		System.out.println("What is your second input for 'commonLetters': ");
+		String commonLettersInput2 = scnr.nextLine();
+		System.out.println(commonLetters(commonLettersInput1, commonLettersInput2));
+		
+		System.out.println("What is the word you would like to modify for 'swapHere': ");
+		String swapHereWord = scnr.nextLine();
+		System.out.println("By how many letters would you like to modify the previous input for 'swapHere': ");
+		int swapHereModifier = scnr.nextInt();
+		System.out.println(swapHere(swapHereWord, swapHereModifier));
+		
+		System.out.println("What is your input for 'letterSum': ");
+		String letterSumInput = scnr.nextLine();
+		System.out.println(letterSum(letterSumInput));
+		
+		System.out.println("What is your input for 'isValidPassword': ");
+		String isValidPasswordInput = scnr.nextLine();
+		System.out.println(isValidPassword(isValidPasswordInput));
 	}
 }
