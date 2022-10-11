@@ -23,7 +23,7 @@ public class StringAnalyze {
 		{
 			for (int o = 0; o < input2.length(); o++)
 			{
-				if (input1.charAt(i) == input2.charAt(o))
+				if (input1.charAt(i) == input2.charAt(o) && outputStr.indexOf(input2.charAt(o)) == -1)
 				{
 					outputStr += input1.charAt(i);
 				}
@@ -95,7 +95,7 @@ public class StringAnalyze {
 	}
 	public static void main(String[] args)
 	{
-		System.out.println(commonLetters("Apple", "orange"));
+		System.out.println(commonLetters("Apple", "Apple"));
 		System.out.println(swapHere("Computer", 5));
 		System.out.println(letterSum("dog!!"));
 		System.out.println(isValidPassword("work1NGpassw0rd"));
